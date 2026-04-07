@@ -1,6 +1,8 @@
 # 🎮 MAZE GAME - A Customizable Pygame Project
 
-Welcome to the Maze Game! This is a fun, interactive game where you navigate through a maze, collect coins, and avoid enemies. Best of all, **you can customize it!**
+> **Working Version** - This is a fully functional game. For a version with intentional bugs for learning, see the `learning-branch`.
+
+Welcome to the Maze Game! This is a fully functional, interactive game where you navigate through a maze, collect coins, and avoid enemies. Best of all, **you can customize it!**
 
 ---
 
@@ -10,8 +12,7 @@ Welcome to the Maze Game! This is a fun, interactive game where you navigate thr
 2. [How to Play](#-how-to-play)
 3. [Game Files](#-game-files)
 4. [Customization Guide](#-customization-guide)
-5. [Learning Points & Bug Challenges](#-learning-points--bug-challenges)
-6. [Troubleshooting](#-troubleshooting)
+5. [Troubleshooting](#-troubleshooting)
 
 ---
 
@@ -226,81 +227,6 @@ if won:
 
 ---
 
-## 🐛 Learning Points & Bug Challenges
-
-This code contains **intentional learning opportunities**. Can you find them?
-
-### Bug #1: Position Validation (Beginner)
-
-**Location:** `entities.py`, in the `Player._is_valid_position()` method
-
-**Hint:** What happens when the player goes to the very edge of the map?
-
-**Challenge:** Find and fix the bug. What causes the player to get stuck?
-
----
-
-### Bug #2: Incomplete Restart (Beginner)
-
-**Location:** `game.py`, in the `handle_input()` method
-
-**Hint:** The comment says "Try typing 'R' to restart" but it won't work!
-
-**Challenge:** Find why pressing R doesn't work, and fix it.
-
-**Bonus:** What's the alternative way to restart shown in the game over screen?
-
----
-
-### Learning Challenge #3: Coin Placement (Intermediate)
-
-**Location:** `game.py`, in the `_generate_coins()` method
-
-**Current behavior:** Coins are placed in EVERY empty space (there are ~200 coins!)
-
-**Challenge:** Modify the coin generation to:
-1. Use `import random` at the top of the file
-2. Place coins in only 50 random empty spaces
-3. Hint: Use `random.sample()` or `random.choice()`
-
----
-
-### Learning Challenge #4: Smart Enemy AI (Intermediate to Advanced)
-
-**Location:** `entities.py`, in the `Enemy.update_position()` method
-
-**Current behavior:** Enemies move directly toward the player (they're dumb!)
-
-**Challenge:** Try one of these:
-1. Make enemies move randomly sometimes
-2. Implement different behaviors for each enemy
-3. Make enemies patrol a specific path
-4. Add a "personality" to each enemy
-
----
-
-### Learning Challenge #5: Add More Game Features (Advanced)
-
-Try adding these features:
-
-**Easy:**
-- Add a third enemy
-- Add a power-up that makes the player faster
-- Add a sound effect when collecting coins (use pygame.mixer)
-
-**Medium:**
-- Add a timer/score system
-- Make enemies spawn from a "base" location
-- Add difficulty levels that increase over time
-
-**Hard:**
-- Add a level system (complete one maze, move to the next)
-- Implement a high score system using files
-- Add special enemies with unique behaviors
-- Create a menu screen
-
----
-
 ## 🔧 Troubleshooting
 
 ### Problem: "Module 'pygame' not found"
@@ -334,7 +260,7 @@ pip install pygame
 ### Problem: Player/Enemy stuck in walls
 
 **Solution:** 
-This might be Bug #1! Check the `_is_valid_position()` method in `entities.py`.
+This shouldn't happen in the working version. Check that all files are properly configured.
 
 ---
 
@@ -366,11 +292,10 @@ your-maze-game/
 
 1. ✅ Get the game running
 2. ✅ Change some colors to make it your own
-3. ✅ Try to find Bug #1 or Bug #2
-4. ✅ Design your own maze
-5. ✅ Add WASD controls
-6. ✅ Improve the enemy AI
-7. ✅ Add a new feature
+3. ✅ Design your own maze
+4. ✅ Add WASD controls
+5. ✅ Improve the enemy AI
+6. ✅ Add new features (power-ups, levels, menus, etc.)
 
 ---
 
